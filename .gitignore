@@ -1,0 +1,14 @@
+#Frontend de eventos
+/events-frontend-app/node_modules/
+
+#Frontend de monitoreo
+/monitoring-frontend-app/node_modules/
+/monitoring-frontend-app/.env
+
+#Servicio de eventos
+/events-service/node_modules/
+
+#Servicio de monitoreo
+/monitoring-service/node_modules/
+
+readme-copy-paste.md

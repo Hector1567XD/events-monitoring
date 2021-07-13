@@ -1,0 +1,67 @@
+version: "3"
+services:
+  events-service:
+    container_name: events-service
+    restart: always
+    build: ./events-service
+    ports:
+      - "4000:3000"
+    volumes:
+      - ./events-service:/app
+    links:
+      - mongo
+    networks:
+      - internal-network
+  monitoring-service:
+    container_name: monitoring-service
+    restart: always
+    build: ./monitoring-service
+    #command: bash -c "nodemon -L index.js"
+    ports:
+      - "4001:3000"
+    volumes:
+      - ./monitoring-service:/app
+    links:
+      - mongo
+    networks:
+      - internal-network
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"
+    logging:
+      driver: "none"
+    networks:
+      - internal-network
+  monitoring-frontend-app:
+    build: ./monitoring-frontend-app
+    environment:
+      - NODE_ENV=production
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - 4005:3000
+    volumes:
+      - ./monitoring-frontend-app:/app
+    stdin_open: true
+    links:
+      - monitoring-service
+    networks:
+      - internal-network
+  events-frontend-app:
+    build: ./events-frontend-app
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - 4006:8080
+    volumes:
+      - ./events-frontend-app:/app
+    stdin_open: true
+    links:
+      - events-service
+    networks:
+      - internal-network
+
+networks:
+    internal-network:
+      driver: bridge
