@@ -16,19 +16,19 @@ Para poder poner el proyecto en funcionamiento en tu sistema operativo, sera nec
 * Tengas instalado [Docker](https://docs.docker.com/installation/#installation)
 * Tengas instalado [Compose](https://docs.docker.com/compose/install/)
 
-Adicionalmente, sera necesario tambien que:
+Adicionalmente, para hacer uso de los mapas de la aplicacion sera necesario tambien que:
 * Generes una API Key en [Google Maps Platform](https://console.cloud.google.com/google/maps-apis/)
 
 Puedes ver mas informacion acerca de como hacerlo en la [documentacion oficial](https://developers.google.com/maps/documentation/javascript/cloud-setup/) de los servicios de Google Cloud
 
 ## Instalacion para desarrollo 🔧
 
-Como consecuencia de la dockerizacion desplegar este proyecto para desarrollo y testeo es realmente facil!, puedes olvidate de _npm install_ o _yarm install_, asi como tambien el montar servidores de _mongo_ y crear redes para los micro-servicios 😋!
+Como notaste en los pre-requisitos este proyecto ha sido dockerizado, por lo que ponerlo a funcionar para desarrollo y testeo es realmente facil 😋!
 
-Primero tendras que clonar el repositorio desde [feredev.me](feredev.me)
+Primero tendras que clonar el repositorio desde [Github](https://github.com/Hector1567XD/events-monitoring.git)
 
 ```bash
-$ git clone events-monitoring
+$ git clone https://github.com/Hector1567XD/events-monitoring.git
 $ cd events-monitoring
 ```
 
@@ -48,14 +48,27 @@ Por ultimo dentro de la carpeta del proyecto tendras que levantar los contenedor
 $ docker-compose up
 ```
 
-Todo listo!, ahora haz desplegado los 2 servicios y los 2 clientes del sistema, para acceder a los clientes de frontend:
+Todo listo 🧙‍♂️,  haz desplegado los 2 servicios y los 2 clientes del sistema, para acceder a los clientes de frontend:
 
-- Aplicacion de monitoreo en [localhost:4005](https://localhost:4005)
-- CRUD de Eventos en [localhost:4006](https://localhost:4006)
+- Aplicacion de monitoreo en [localhost:4005](http://localhost:4005)
+- Interface de eventos en [localhost:4006](http://localhost:4006)
 
 ## Arquitectura ⚙️
 
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+Este proyecto fue construido con una arquitectura de micro-servicios, cuenta tambien con un frontend distribuido en 2 aplicaciones separada la una de la otra y se comunicacion con los micro-servicios directamente haciendo uso de API Rest y Sockets.
+
+Este proyecto no cuenta con una API Gateway de _momento._
+
+### Servicio de monitoreo
+
+### Servicio de eventos
+
+### Aplicacion de monitoreo
+
+### Interface de eventos
+Es una pequeña aplicacion de tipo CRUD construida en VUE, a la cual se puede acceder desde [localhost:4006](http://localhost:4006), se comunica con el servicio de eventos para:
+1. Listar los eventos existentes en la base de datos del sistema
+2. Crear nuevos eventos
 
 ## Construido con 🛠️
 
