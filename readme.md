@@ -32,7 +32,7 @@ $ git clone https://github.com/Hector1567XD/events-monitoring.git
 $ cd events-monitoring
 ```
 
-Despues, tendras que crear o copiar un _.env_ dentro de la carpeta _/monitoring-frontend-app/_
+Despues, tendras que crear o copiar un `.env` dentro de la carpeta `/monitoring-frontend-app/`
 ```bash
 $ cp /monitoring-frontend-app/.env.example /monitoring-frontend-app/.env
 ```
@@ -68,7 +68,7 @@ Todos los micro-servicios y aplicaciones que componen al sistema se encuentran d
 └── monitoring-service
 ```
 
-Todos los contenedores usan [node:13](https://hub.docker.com/_/node https://hub.docker.com/_/node) exceptuando un quinto contenedor declarado en el docker-compose.yml que hace uso de [mongo](https://hub.docker.com/_/mongo) para servir la base de datos
+Todos los contenedores usan [node:13](https://hub.docker.com/_/node) exceptuando un quinto contenedor declarado en el docker-compose.yml que hace uso de [mongo](https://hub.docker.com/_/mongo) para servir la base de datos
 
 ### Servicio de monitoreo
 
@@ -81,104 +81,10 @@ Es una pequeña aplicacion de tipo CRUD construida en VUE, a la cual se puede ac
 1. Listar los eventos existentes en la base de datos del sistema
 2. Crear nuevos eventos
 
-## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
-
 ## Documentacion 📖
 
-Puedes encontrar como comunicarte con la API Rest de los servicios de este proyecto entrando a [Wiki](https://github.com/tu/proyecto/wiki)
+Puedes encontrar como comunicarte con la API Rest de los servicios de este proyecto entrando a la [Referencia de la API](https://documenter.getpostman.com/view/4092353/Tzm8Eup6#48cb5ce6-7c25-4664-8ef9-058f5ab7aff5), la cual fue generada con [Postman](https://www.postman.com)
 
 ## Licencia 📄
 
 Este proyecto está bajo la Licencia (MIT) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
-
----
-
-
----
-
-## El resto
-You receive a message from a prospective employer:
-
-"Before your interview, write a program that runs a server that is accessible on http://localhost:4000/. When your server receives a request on http://localhost:4000/set?somekey=somevalue it should store the passed key and value in memory. When it receives a request on http://localhost:4000/get?key=somekey it should return the value stored at somekey. Store the data in memory, not in a database, but bear in mind that you will later need to add a database to this code."
-
-Create a new git repository and write code to fulfill the brief to the best of your ability. We will be looking for clean, well tested code in your choice of technology. In addition, the last sentence of the brief implies that you should consider how the code could easily be extended to add an as-yet-unknown data store.
-
-## <a name="Stories">User Stories</a>
-```
-As a user
-So that I can store a variable
-I want to be able post my variable
-
-As a user
-So that I can retrieve a variable
-I want to be able get my variable
-
-As a user
-So that I can retrieve a variable
-I want a json object to be returned
-
-As a user
-So that I can reset the data
-I want to reset all variables
-
-As a user
-So that I can view all variable
-I want to display all variables
-```
-
-
-
-## <a name="Usage">Usage</a>
-### To post your variable
-type `http://localhost:4000/set?somekey=somevalue` into your web browser, to set the variable `somekey`
-
-### To get your variable
-type `http://localhost:4000/get?key=somekey` into your web browser, to retrieve JSON object of `somekey`
-
-### To reset all saved variables
-type `http://localhost:4000/reset` into your web browser, to reset all variables
-
-### To view all saved variables
-type `http://localhost:4000/view` into your web browser, to view all variables
-https://github.com/adrianeyre/database-tech-test/blob/master/README.md#challenege
-
-
----
-
-## Prerequisites
-Make sure you have installed all of the following prerequisites on your development machine:
-* Git - [Download & Install Git](https://git-scm.com/downloads). OSX and Linux machines typically have this already installed.
-* Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager. If you encounter any problems, you can also use this [GitHub Gist](https://gist.github.com/isaacs/579814) to install Node.js.
-* MongoDB - [Download & Install MongoDB](http://www.mongodb.org/downloads), and make sure it's running on the default port (27017).
-* Bower - You're going to use the [Bower Package Manager](http://bower.io/) to manage your front-end packages. Make sure you've installed Node.js and npm first, then install bower globally using npm:
-
-```bash
-$ npm install -g bower
-```
-
-
-## Development and deployment With Docker
-
-* Install [Docker](https://docs.docker.com/installation/#installation)
-* Install [Compose](https://docs.docker.com/compose/install/)
-
-* Local development and testing with compose:
-```bash
-$ docker-compose up
-```
-
-* Local development and testing with just Docker:
-```bash
-$ docker build -t mean .
-$ docker run -p 27017:27017 -d --name db mongo
-$ docker run -p 3000:3000 --link db:db_1 mean
-$
-```
-
-https://medium.com/chingu/keys-to-a-well-written-readme-55c53d34fe6d
