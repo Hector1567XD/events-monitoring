@@ -59,6 +59,15 @@ Este proyecto fue construido con una arquitectura de micro-servicios, cuenta tam
 
 Este proyecto no cuenta con una API Gateway de _momento._
 
+Todos los micro-servicios y aplicaciones que componen al sistema se encuentran dentro de un mismo repositorio, resultando en la estructura de carpetas:
+
+```bash
+├── avents-frontend-app
+├── events-service
+├── monitoring-frontend-app
+└── monitoring-service
+```
+
 ### Servicio de monitoreo
 
 ### Servicio de eventos
@@ -78,47 +87,19 @@ _Menciona las herramientas que utilizaste para crear tu proyecto_
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
 * [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
 
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
 ## Documentacion 📖
 
 Puedes encontrar como comunicarte con la API Rest de los servicios de este proyecto entrando a [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
-## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto.
 
 ## Licencia 📄
 
 Este proyecto está bajo la Licencia (MIT) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
-
----
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
-
-https://dillinger.io
-
-
 ---
 
 ## Container structures
 
-```bash
-├── app
-├── web
-└── db
-```
+
 
 ### app container
 
