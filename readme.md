@@ -17,7 +17,9 @@ Para poder poner el proyecto en funcionamiento en tu sistema operativo, sera nec
 * Tengas instalado [Compose](https://docs.docker.com/compose/install/)
 
 Adicionalmente, sera necesario tambien que:
-* Generar una API Key en [Google Maps Platform](https://console.cloud.google.com/google/maps-apis/)
+* Generes una API Key en [Google Maps Platform](https://console.cloud.google.com/google/maps-apis/)
+
+Puedes ver mas informacion acerca de como hacerlo en la [documentacion oficial](https://developers.google.com/maps/documentation/javascript/cloud-setup/) de los servicios de Google Cloud
 
 ## Instalacion para desarrollo 🔧
 
