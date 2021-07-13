@@ -1,4 +1,4 @@
-# Sistema de monitoreo
+# Sistema de monitoreo de eventos
 
 Este sistema tiene un cliente que permite a sus usuarios subscribirse a una lista de **palabras clave** a un servicio de monitoreo, dicho servicio estará recibiendo eventos continuamente, si recibe uno cuya descripción contenga una de las palabras claves entonces enviara este evento al cliente donde se mostrara en un mapa.
 
@@ -10,10 +10,13 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 
 ### Pre-requisitos 📋
 
-Para una mejor portabilidad y fácil ejecución, este proyecto fue dockerizado, por lo que será necesario que instales en tu sistema operativo _docker_ y _docker-compose_:
+Para poder poner el proyecto en funcionamiento en tu sistema operativo, sera necesario que:
 
-* Instalar [Docker](https://docs.docker.com/installation/#installation)
-* Instalar [Compose](https://docs.docker.com/compose/install/)
+* Tengas instalado [Git](https://git-scm.com/downloads)
+* Tengas instalado [Docker](https://docs.docker.com/installation/#installation)
+* Tengas instalado [Compose](https://docs.docker.com/compose/install/)
+
+Adicionalmente, sera necesario tambien que:
 * Generar una API Key en [Google Maps Platform](https://console.cloud.google.com/google/maps-apis/)
 
 ## Instalacion para desarrollo 🔧
