@@ -73,13 +73,19 @@ Todos los contenedores usan [node:13](https://hub.docker.com/_/node) exceptuando
 ### Servicio de eventos
 Es un pequeño micro-servicio que sirve de CRUD al sistema para la creacion de eventos, fue construido en Express y emplea Mongoose como ODM.
 
+Se puede acceder desde [localhost:4000](http://localhost:4000)
+
 ### Servicio de monitoreo
 Es un pequeño micro-servicio que recibe un hook del micro-servicio de eventos cada vez que crea un nuevo evento, emplea websockets para mantener una comunicacion una aplicacion cliente, tambien sirve una API Rest para crear nuevas subscripciones
 
 Para hacer uso de la API Rest del servicio de monitoreo debera enviar en las cabezeras de la peticion el `id de cliente` y el `token secreto` del socket asociado al cliente.
 
+Se puede acceder desde [localhost:4001](http://localhost:4001)
+
 ### Aplicacion de monitoreo
 Es una pequeña aplicacion que puede comunicarse con el servicio de monitoreo por medio de websockets para recibir notificacion de la creacion de nuevos eventos, puede ademas por medio de una API Rest que sirve el servicio de monitoreo crear nuevas subscripciones con dicho servicio con distintas palabras claves.
+
+Se puede acceder desde [localhost:4005](http://localhost:4005)
 
 ### Interface de eventos
 Es una pequeña aplicacion de tipo CRUD construida en VUE, a la cual se puede acceder desde [localhost:4006](http://localhost:4006), se comunica con el servicio de eventos para:
