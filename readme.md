@@ -68,6 +68,8 @@ Todos los micro-servicios y aplicaciones que componen al sistema se encuentran d
 └── monitoring-service
 ```
 
+Todos los contenedores usan [node:13](https://hub.docker.com/_/node https://hub.docker.com/_/node) exceptuando un quinto contenedor declarado en el docker-compose.yml que hace uso de [mongo](https://hub.docker.com/_/mongo) para servir la base de datos
+
 ### Servicio de monitoreo
 
 ### Servicio de eventos
@@ -96,27 +98,6 @@ Puedes encontrar como comunicarte con la API Rest de los servicios de este proye
 Este proyecto está bajo la Licencia (MIT) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
 ---
-
-## Container structures
-
-
-
-### app container
-
-- Base image
-  - [php](https://hub.docker.com/_/php):8.0-fpm-buster
-  - [composer](https://hub.docker.com/_/composer):2.0
-
-### web container
-
-- Base image
-  - [nginx](https://hub.docker.com/_/nginx):1.20-alpine
-  - [node](https://hub.docker.com/_/node):16-alpine
-
-### db container
-
-- Base image
-  - [mysql/mysql-server](https://hub.docker.com/r/mysql/mysql-server):8.0
 
 
 ---
